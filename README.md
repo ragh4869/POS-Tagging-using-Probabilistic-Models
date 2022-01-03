@@ -1,4 +1,4 @@
-# Part 1: Part-of-Speech Tagging using Probabilistic Models
+# Part-of-Speech Tagging using Probabilistic Models
 
 ### Objective:
 Predict the parts of speech for each word in the given sentence using the probability models - Simple, Viterbi(HMM) and Markov Chain Monte Carlo(MCMC).
