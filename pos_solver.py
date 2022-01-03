@@ -1,22 +1,10 @@
-###################################
-# CS B551 Spring 2021, Assignment #3
-#
-# Your names and user ids: 
-#
-# (Based on skeleton code by D. Crandall)
-#
-
 # Defining Packages
 import random
 import math
 import numpy as np
 import random
  
-
-# We've set up a suggested code structure, but feel free to change it. Just
-# make sure your code still works with the label.py and pos_scorer.py code
-# that we've supplied.
-#
+# Defining Main Class
 class Solver:
     # Calculate the log of the posterior probability of a given sentence
     #  with a given part-of-speech labeling. Right now just returns -999 -- fix this!
@@ -37,7 +25,6 @@ class Solver:
             print("Unknown algo!")
 
     # Do the training!
-    #
     def train(self, data):
         for i in data:
             for l in range(len(i[0])):
@@ -137,9 +124,6 @@ class Solver:
                 if max_num2[1] < self.emi_ident[i]:
                     max_num2 = [i,self.emi_ident[i]]
         self.emi_ident['max'] = max_num2
-
-
-    # Functions for each algorithm. Right now this just returns nouns -- fix this!
     
     # Defining Simple Model 
     def simplified(self, sentence):
@@ -180,7 +164,6 @@ class Solver:
         return val
 
     # Defining Viterbi(HMM) Model
-    # Ref: David Crandall code in viterbi-sol.py
     def hmm_viterbi(self, sentence):
         pred_words = [""]*len(sentence)
         hmm = {}        
@@ -370,11 +353,9 @@ class Solver:
         return val
 
 
-    # This solve() method is called by label.py, so you should keep the interface the
-    #  same, but you can change the code itself. 
-    # It should return a list of part-of-speech labelings of the sentence, one
-    #  part of speech per word.
-    #
+    # This solve() method is called by label.py 
+    # It should return a list of part-of-speech labelings of the sentence, one part of speech per word.
+    
     def solve(self, model, sentence):
         if model == "Simple":
             return self.simplified(sentence)

@@ -1,21 +1,9 @@
-###################################
-# CS B551 Spring 2021, Assignment #3
-# D. Crandall
-#
-# There should be no need to modify this file.
-# Edit pos_solver.py instead!
-#
-# To get started, try running: 
-#
-#   python3 ./label.py bc.train bc.test.tiny
-#
-
 from pos_scorer import Score
 from pos_solver import *
 import sys
 
 # Read in training or test data file
-#
+
 def read_data(fname):
     exemplars = []
     file = open(fname, 'r');
@@ -28,7 +16,7 @@ def read_data(fname):
 
 ####################
 # Main program
-#
+
 
 if len(sys.argv) < 3:
     print("Usage: \npython3 ./label.py training_file test_file")
