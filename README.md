@@ -89,3 +89,9 @@ Initially, we got a sample value and from this sample, a gen_sample function was
 
 If the cumulative value was greater than the random value, the sample part-of-speech with this new one and the process was repeated. The issues with this was the time taken and due to wrong implementation, the accuracy was not more than 5%.
 We then implemented the above algorithm thus reaching ~91% for words and ~36% for sentences.
+
+
+##### Command:
+The following command can be used to run the program in the command prompt-
+
+python label.py bc.train bc.test
